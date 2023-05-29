@@ -1,0 +1,47 @@
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    margin-top: calc(-3.375rem/2);
+}
+
+form .inputTask {
+    padding: 16px;
+    background: var(--gray-500);
+    border-radius: 8px;
+    border: 1px solid var(--gray-700);
+    flex: 1;
+    max-width: 39.875rem;
+    color: var(--gray-100);
+    font-size: 1rem;
+}
+
+form .inputTask:focus {
+    outline: 2px solid var(--purple-dark);
+}
+
+form button {
+    background: var(--blue-dark);
+    border: none;
+    color: var(--gray-100);
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .875rem;
+    font-weight: 700;
+    transition: background-color .5s;
+}
+
+form button:hover {
+    background: var(--blue);
+    outline: none;
+}
+
+form button:focus {
+    border: none;
+    outline: solid var(--purple-dark);
+}
