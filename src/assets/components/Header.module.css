@@ -1,4 +1,4 @@
-header {
+.header {
     background: var(--gray-700);
     min-height: 12.5rem;
     display: flex;
@@ -7,22 +7,22 @@ header {
     padding-bottom: 8px;
 }
 
-header .logo {
+.header .logo {
     display: flex;
     align-items: flex-end;
     gap: .75rem;
 }
 
-header .logo img {
+.header .logo img {
     width: 1.375rem;
     height: 2.25rem;
 }
 
-header .logo h1 {
+.header .logo h1 {
     font-size: 2.5rem;
     color: var(--blue);
 }
 
-header .logo span {
+.header .logo span {
     color: var(--purple-dark);
 }

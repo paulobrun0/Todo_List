@@ -1,12 +1,18 @@
-form {
+.taskContainer {
+    max-width: 46rem;
+    margin: 0 auto;
+}
+
+.form {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: .5rem;
     margin-top: calc(-3.375rem/2);
+    flex: 1;
 }
 
-form .inputTask {
+.form .inputTask {
     padding: 16px;
     background: var(--gray-500);
     border-radius: 8px;
@@ -17,11 +23,11 @@ form .inputTask {
     font-size: 1rem;
 }
 
-form .inputTask:focus {
+.form .inputTask:focus {
     outline: 2px solid var(--purple-dark);
 }
 
-form button {
+.form .btnCreate {
     background: var(--blue-dark);
     border: none;
     color: var(--gray-100);
@@ -36,12 +42,39 @@ form button {
     transition: background-color .5s;
 }
 
-form button:hover {
+.form button:hover {
     background: var(--blue);
     outline: none;
 }
 
-form button:focus {
+.form button:focus {
     border: none;
     outline: solid var(--purple-dark);
+}
+
+.headerTast {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+.tasks,
+.taskDone {
+    color: var(--blue);
+    font-weight: bold;
+    line-height: 1.0625rem;
+}
+
+.taskDone {
+    color: var(--purple);
+}
+
+.headerTast span {
+    background: var(--gray-400);
+    color: var(--gray-200);
+    margin-left: .5rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: bold;
+    line-height: .9375rem;
 }

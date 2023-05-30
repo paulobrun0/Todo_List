@@ -1,0 +1,85 @@
+.formTask {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    background: var(--gray-500);
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.formTask .checkbox {
+    /* display: block; */
+    /* width: .9263rem;
+    height: .9263rem;
+    border: 2px solid var(--blue);
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #10212A; */
+
+    /* removing default appearance */
+    /* -webkit-appearance: none;
+    appearance: none;
+    /* creating a custom design */
+    /* width: 1.6em;
+    height: 1.6em;
+    border-radius: 0.15em;
+    margin-right: 0.5em;
+    border: 0.15em solid #007a7e;
+    outline: none;
+    */
+    cursor: pointer;
+    margin-right: 12px;
+}
+
+/* .formTask .checkbox::before {
+    content: "2714";
+    font-size: 1.5em;
+    color: #fff;
+    position: absolute;
+    right: 1px;
+    top: -5px;
+} */
+
+/* .formTask input[type="checkbox"]:hover {
+    border: 2px solid var(--blue-dark);
+} */
+
+
+.formTask .incomplete {
+    color: var(--gray-100);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.formTask .complete {
+    text-decoration: line-through;
+    color: var(--gray-100);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.formTask button {
+    border: none;
+}
+
+.formTask button {
+    background: transparent;
+    border: 0;
+    color: #808080;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    transition: .5s;
+}
+
+.formTask button:hover {
+    color: var(--danger);
+    background: var(--gray-400);
+
+}
+
+.formTask button svg {
+    margin: 2px;
+    ;
+}
