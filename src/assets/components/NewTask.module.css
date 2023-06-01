@@ -42,12 +42,17 @@
     transition: background-color .5s;
 }
 
-.form button:hover {
+.form .btnCreate:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.form .btnCreate:hover {
     background: var(--blue);
     outline: none;
 }
 
-.form button:focus {
+.form .btnCreate:focus {
     border: none;
     outline: solid var(--purple-dark);
 }

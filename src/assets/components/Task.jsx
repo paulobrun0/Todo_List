@@ -3,36 +3,36 @@ import styles from "./Task.module.css";
 import { Trash } from "@phosphor-icons/react";
 import { useState } from "react";
 
-export const Task = () => {
+// eslint-disable-next-line react/prop-types
+export const Task = ({ content, onDeleteTask, id, taskIsComplete }) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = (e) => {
     setIsChecked(e.target.checked);
+    taskIsComplete(id);
+  };
+
+  const handleDeleteTask = () => {
+    onDeleteTask(id);
   };
 
   return (
     <div className={styles.formTask}>
-      <input
-        className={styles.checkbox}
-        type="checkbox"
-        checked={isChecked}
-        onChange={handleCheckboxChange}
-      />
+      <label className={styles.checkboxContainer}>
+        <input
+          className={styles.checkbox}
+          type="checkbox"
+          checked={isChecked}
+          onChange={handleCheckboxChange}
+        />
+        <span className={styles.checkboxCheckmark}></span>
+      </label>
       {isChecked ? (
-        <p className={styles.complete}>
-          Integer urna interdum massa libero auctor neque turpis turpis semper.
-          Duis vel sed fames integer. Integer urna interdum massa libero auctor
-          neque turpis turpis semper. Duis vel sed fames integer.
-        </p>
+        <p className={styles.complete}>{content}</p>
       ) : (
-        <p className={styles.incomplete}>
-          Integer urna interdum massa libero auctor neque turpis turpis semper.
-          Duis vel sed fames integer. Integer urna interdum massa libero auctor
-          neque turpis turpis semper. Duis vel sed fames integer.
-        </p>
+        <p className={styles.incomplete}>{content}</p>
       )}
-
-      <button>
+      <button onClick={handleDeleteTask}>
         <Trash size={24} />
       </button>
     </div>
