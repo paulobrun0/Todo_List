@@ -53,7 +53,7 @@ export const NewTask = () => {
           Criar <PlusCircle size={18} />
         </button>
       </form>
-      <div className={styles.headerTast}>
+      <div className={styles.headerTask}>
         <p className={styles.tasks}>
           Tarefas criadas <span>{tasks.length}</span>
         </p>

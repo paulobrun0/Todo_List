@@ -22,3 +22,9 @@
     font-weight: normal;
     color: var(--gray-300);
 }
+
+@media (max-width: 420px) {
+    .taskEmpty {
+        text-align: center;
+    }
+}
